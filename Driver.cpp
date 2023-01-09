@@ -46,6 +46,14 @@ int main()
 		
 		// implement a string tokenizer to populate the parameters vector 
 		// check function strtok_s
+		const char* delimiter = " ";
+		char* nextToken;
+		char* token = strtok_s(cstr, delimiter, &nextToken);
+		while (token)
+		{
+			parameters.push_back(token);
+			token = strtok_s(NULL, delimiter, &nextToken);
+		}
 
 		// as a result of the process, parameters[0] should hold your command, followed by your parameters 
 		string command = parameters[0];
