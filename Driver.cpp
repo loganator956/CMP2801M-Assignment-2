@@ -68,11 +68,10 @@ int main()
 			// note that the the parameters vector contains ascii values
 			// HINT: stoi function converts from string to int
 
-			x = parameters[1].c_str(); // fix me! also note that x is not previously defined :(
-			// int y = ...
-			// int h = ...
-			// int w = ...
-
+			int x = std::stoi(parameters[1].c_str());
+			int y = std::stoi(parameters[2].c_str());
+			int h = std::stoi(parameters[3].c_str());
+			int w = std::stoi(parameters[4].c_str());
 
 			Rectangle* r = new Rectangle(x, y, h, w);
 			shapes.push_back(r);
@@ -82,6 +81,10 @@ int main()
 		else if (command.compare("addS") == 0) {
 			// get parameters
 			// ...
+			int x = std::stoi(parameters[1].c_str());
+			int y = std::stoi(parameters[2].c_str());
+			int e = std::stoi(parameters[3].c_str());
+
 			Square* s = new Square(x, y, e);
 			shapes.push_back(s);
 			cout << s->toString();
@@ -90,6 +93,10 @@ int main()
 		if (command.compare("addC") == 0) {
 			// get parameters
 			// ...
+			int x = std::stoi(parameters[1].c_str());
+			int y = std::stoi(parameters[2].c_str());
+			int r = std::stoi(parameters[3].c_str());
+
 			Circle* c = new Circle(x, y, r);
 			shapes.push_back(c);
 			cout << c->toString();
@@ -111,13 +118,13 @@ int main()
 			
 			// Study the following code. A Shape object is not Movable, but all derived classes are...
 			// you can't automatically type cast from a Shape to a Movable, but you can force a downcasting
-			Movable *m = dynamic_cast<Movable*>(shapes[shapeNo - 1]);
-			m->move(x, y);
+		//	Movable *m = dynamic_cast<Movable*>(shapes[shapeNo - 1]);
+		//	m->move(x, y);
 			// scale should work similarly...
 
 			// note that here you should see the corresponding toString output for the derived classes...
 			// if toString is not a virtual function, you may see the base class functionality :(
-			cout << shapes[shapeNo - 1]->toString();
+		//	cout << shapes[shapeNo - 1]->toString();
 		}
 		else if (command.compare("display") == 0) {
 			// this is not given in our example, but why don't you implement a display function which shows all objects stored in shapes?
