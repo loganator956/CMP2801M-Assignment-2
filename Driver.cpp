@@ -75,7 +75,8 @@ int main()
 
 			Rectangle* r = new Rectangle(x, y, h, w);
 			shapes.push_back(r);
-			cout << r->toString(); /* instead of this, you may implement operator overloadig and 
+			// TODO: Implement operator overloading
+			cout << r->toString() << endl; /* instead of this, you may implement operator overloadig and
 									use cout << r which will give you additional points */
 		}
 		else if (command.compare("addS") == 0) {
