@@ -25,7 +25,7 @@ void Rectangle::scale()
 
 std::string Rectangle::toString()
 {
-	return std::string();
+	return "Rectangle[h=" + std::to_string(height) + ",w=" + std::to_string(width) + "]";
 }
 
 Rectangle::Rectangle(int x, int y, int h, int w)
