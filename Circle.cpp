@@ -10,9 +10,9 @@ float Circle::calculatePerimeter()
     return 0.0f;
 }
 
-std::vector<Point> Circle::calculatePoints()
+std::vector<Point*> Circle::calculatePoints()
 {
-    return std::vector<Point>();
+    return std::vector<Point*>();
 }
 
 void Circle::move()

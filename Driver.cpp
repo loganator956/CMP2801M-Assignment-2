@@ -132,11 +132,11 @@ int main()
 		}
 
 		// calculate points, area, and perimeter
-		std::vector<Point> points = shapes[shapes.size() - 1]->calculatePoints();
+		std::vector<Point*> points = shapes[shapes.size() - 1]->calculatePoints();
 		std::cout << "Points[";
 		for (int i = 0; i < points.size(); i++)
 		{
-			std::cout << "(" << points[i].get_x() << ", " << points[i].get_y() << ")";
+			std::cout << "(" << points[i]->get_x() << ", " << points[i]->get_y() << ")";
 		}
 		std::cout << "]" << endl;
 		float a = shapes[shapes.size() - 1]->calculateArea();

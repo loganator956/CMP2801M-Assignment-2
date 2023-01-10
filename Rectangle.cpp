@@ -10,9 +10,9 @@ float Rectangle::calculatePerimeter()
 	return 0.0f;
 }
 
-std::vector<Point> Rectangle::calculatePoints()
+std::vector<Point*> Rectangle::calculatePoints()
 {
-	return std::vector<Point>();
+	return std::vector<Point*>();
 }
 
 void Rectangle::move()

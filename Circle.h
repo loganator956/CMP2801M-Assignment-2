@@ -9,7 +9,7 @@ private:
 public:
     float calculateArea();
     float calculatePerimeter();
-    std::vector<Point> calculatePoints();
+    std::vector<Point*> calculatePoints();
     void move();
     void scale();
     std::string toString();

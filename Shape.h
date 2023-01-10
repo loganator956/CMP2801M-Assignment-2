@@ -13,7 +13,7 @@ public:
 	Point* leftTop;
 	virtual float calculateArea() = 0;
 	virtual float calculatePerimeter() = 0;
-	virtual std::vector<Point> calculatePoints() = 0;
+	virtual std::vector<Point*> calculatePoints() = 0;
 	virtual std::string toString() = 0;
 };
 
