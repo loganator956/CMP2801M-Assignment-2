@@ -2,12 +2,12 @@
 
 float Square::calculateArea()
 {
-    return 0.0f;
+    return (float)(edge * edge);
 }
 
 float Square::calculatePerimeter()
 {
-    return 0.0f;
+    return (float)(edge * 4);
 }
 
 std::vector<Point*> Square::calculatePoints()
