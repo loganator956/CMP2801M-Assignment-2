@@ -114,13 +114,16 @@ int main()
 		}
 		else if (command.compare("move") == 0) {
 			// move object at index 
-			int shapeNo; // read from parameters
+			// read from parameters
+			int shapeNo = std::stoi(parameters[1].c_str()); 
+			int x = std::stoi(parameters[2].c_str());
+			int y = std::stoi(parameters[3].c_str());
 			// you may want to check if the index exists or not!
 			
 			// Study the following code. A Shape object is not Movable, but all derived classes are...
 			// you can't automatically type cast from a Shape to a Movable, but you can force a downcasting
-		//	Movable *m = dynamic_cast<Movable*>(shapes[shapeNo - 1]);
-		//	m->move(x, y);
+			Movable *m = dynamic_cast<Movable*>(shapes[shapeNo - 1]);
+			m->move(x, y);
 			// scale should work similarly...
 
 			// note that here you should see the corresponding toString output for the derived classes...
