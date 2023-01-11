@@ -1,4 +1,5 @@
 #include "Square.h"
+#include <iostream>
 
 float Square::calculateArea()
 {
@@ -37,7 +38,14 @@ void Square::scale(int x, int y)
 
 std::string Square::toString()
 {
-    return std::string();
+    std::string newString = "Square[e=" + std::to_string(edge) + "]" +
+        "\nPoints[";
+    for (int i = 0; i < get_points().size(); i++)
+    {
+        std::cout << "(" << get_points()[i]->get_x() << ", " << get_points()[i]->get_y() << ")";
+    }
+    newString += "]\nArea=" + std::to_string(get_area()) + " Perimeter=" + std::to_string(get_perimeter());
+    return newString;
 }
 
 Square::Square(int x, int y, int e)

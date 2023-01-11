@@ -140,16 +140,11 @@ int main()
 		}
 
 		// calculate points, area, and perimeter
-		std::vector<Point*> points = shapes[shapes.size() - 1]->calculatePoints();
-		std::cout << "Points[";
-		for (int i = 0; i < points.size(); i++)
-		{
-			std::cout << "(" << points[i]->get_x() << ", " << points[i]->get_y() << ")";
-		}
-		std::cout << "]" << endl;
-		float a = shapes[shapes.size() - 1]->calculateArea();
-		float p = shapes[shapes.size() - 1]->calculatePerimeter();
-		std::cout << "Area=" << a << " Perimeter=" << p << endl;
+		// TODO: Make it update these automatically when necessary
+		shapes[shapes.size() - 1]->calculatePoints();
+		shapes[shapes.size() - 1]->calculateArea();
+		shapes[shapes.size() - 1]->calculatePerimeter();
+		std::cout << shapes[shapes.size() - 1]->toString() << std::endl;
 
 		// do any necessary postprocessing at the end of each loop...
 		// yes, there is some necessary postprocessing...

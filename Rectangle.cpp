@@ -37,7 +37,14 @@ void Rectangle::scale(int x, int y)
 
 std::string Rectangle::toString()
 {
-	return "Rectangle[h=" + std::to_string(height) + ",w=" + std::to_string(width) + "]";
+	std::string newString = "Rectangle[w=" + std::to_string(width) + ", h=" + std::to_string(height) + "]" +
+		"\nPoints[";
+	for (int i = 0; i < get_points().size(); i++)
+	{
+		std::cout << "(" << get_points()[i]->get_x() << ", " << get_points()[i]->get_y() << ")";
+	}
+	newString += "]\nArea=" + std::to_string(get_area()) + " Perimeter=" + std::to_string(get_perimeter());
+	return newString;
 }
 
 Rectangle::Rectangle(int x, int y, int h, int w)
