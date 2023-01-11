@@ -22,6 +22,8 @@ std::vector<Point*> Rectangle::calculatePoints()
 
 void Rectangle::move(int x, int y)
 {
+	leftTop->set_x(leftTop->get_x() + x);
+	leftTop->set_y(leftTop->get_y() + y);
 }
 
 void Rectangle::scale(int x, int y)
