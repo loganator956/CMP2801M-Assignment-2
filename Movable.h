@@ -4,7 +4,7 @@ class Movable
 private:
 
 public:
-	virtual void move() = 0;
-	virtual void scale() = 0;
+	virtual void move(int x, int y) = 0;
+	virtual void scale(int x, int y) = 0;
 };
 
