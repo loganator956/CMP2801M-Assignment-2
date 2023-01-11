@@ -125,7 +125,6 @@ int main()
 			Movable *m = dynamic_cast<Movable*>(shapes[shapeNo - 1]);
 			m->move(x, y);
 			// scale should work similarly...
-
 			// note that here you should see the corresponding toString output for the derived classes...
 			// if toString is not a virtual function, you may see the base class functionality :(
 		//	cout << shapes[shapeNo - 1]->toString();
