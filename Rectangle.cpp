@@ -2,17 +2,22 @@
 
 float Rectangle::calculateArea()
 {
-	return 0.0f;
+	return (float)(width * height);
 }
 
 float Rectangle::calculatePerimeter()
 {
-	return 0.0f;
+	return (float)(width * 2 + height * 2);
 }
 
 std::vector<Point*> Rectangle::calculatePoints()
 {
-	return std::vector<Point*>();
+	std::vector<Point*> points = std::vector<Point*>();
+	points.push_back(leftTop);
+	points.push_back(new Point(leftTop->get_x() + width, leftTop->get_y()));
+	points.push_back(new Point(leftTop->get_x() + width, leftTop->get_y() - height));
+	points.push_back(new Point(leftTop->get_x(), leftTop->get_y() - height));
+	return points;
 }
 
 void Rectangle::move()
