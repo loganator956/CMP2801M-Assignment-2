@@ -22,6 +22,8 @@ std::vector<Point*> Square::calculatePoints()
 
 void Square::move(int x, int y)
 {
+    leftTop->set_x(leftTop->get_x() + x);
+    leftTop->set_y(leftTop->get_y() + y);
 }
 
 void Square::scale(int x, int y)
