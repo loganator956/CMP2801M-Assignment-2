@@ -20,11 +20,11 @@ std::vector<Point*> Rectangle::calculatePoints()
 	return points;
 }
 
-void Rectangle::move()
+void Rectangle::move(int x, int y)
 {
 }
 
-void Rectangle::scale()
+void Rectangle::scale(int x, int y)
 {
 }
 

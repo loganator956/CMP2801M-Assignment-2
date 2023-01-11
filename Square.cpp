@@ -20,11 +20,11 @@ std::vector<Point*> Square::calculatePoints()
     return points;
 }
 
-void Square::move()
+void Square::move(int x, int y)
 {
 }
 
-void Square::scale()
+void Square::scale(int x, int y)
 {
 }
 
