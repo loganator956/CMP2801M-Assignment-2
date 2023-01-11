@@ -110,6 +110,12 @@ int main()
 			// Multiple inhertitance is tricky! The Shape class does nto have a scale function, the Movable does!
 			// As a result all your derived classes have scale functions... 
 			// You may need to use type casting wisely to use polymorphic functionality!
+			int shapeNo = std::stoi(parameters[1].c_str());
+			int x = std::stoi(parameters[2].c_str());
+			int y = std::stoi(parameters[3].c_str());
+
+			Movable* m = dynamic_cast<Movable*>(shapes[shapeNo - 1]);
+			m->scale(x, y);
 			
 		}
 		else if (command.compare("move") == 0) {

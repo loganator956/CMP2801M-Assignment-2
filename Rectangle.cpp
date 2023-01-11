@@ -28,6 +28,11 @@ void Rectangle::move(int x, int y)
 
 void Rectangle::scale(int x, int y)
 {
+	width *= x;
+	height *= y;
+	calculatePoints();
+	calculateArea();
+	calculatePerimeter();
 }
 
 std::string Rectangle::toString()
