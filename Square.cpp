@@ -29,7 +29,10 @@ void Square::move(int x, int y)
 void Square::scale(int x, int y)
 {
     // leftTOp stays the same
-    
+    edge *= x;
+    calculatePoints();
+    calculateArea();
+    calculatePerimeter();
 }
 
 std::string Square::toString()
