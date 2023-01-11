@@ -6,6 +6,7 @@ class Circle :
 {
 private:
     int radius;
+    const float pi = 3.141592;
 public:
     float calculateArea();
     float calculatePerimeter();
