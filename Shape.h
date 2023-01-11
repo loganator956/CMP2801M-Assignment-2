@@ -9,6 +9,9 @@ private:
 	float perimeter;
 	std::vector<Point> points;
 public:
+	std::vector<Point*> get_points();
+	float get_area();
+	float get_perimeter();
 	bool isCircular;
 	Point* leftTop;
 	virtual float calculateArea() = 0;

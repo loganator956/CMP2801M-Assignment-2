@@ -1,4 +1,5 @@
 #include "Rectangle.h"
+#include <iostream>
 
 float Rectangle::calculateArea()
 {

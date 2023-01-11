@@ -24,3 +24,18 @@ Shape::~Shape()
 	std::cout << "Shape deconstructor" << std::endl;
 	delete leftTop;
 }
+
+std::vector<Point*> Shape::get_points()
+{
+	return points;
+}
+
+float Shape::get_area()
+{
+	return area;
+}
+
+float Shape::get_perimeter()
+{
+	return perimeter;
+}
