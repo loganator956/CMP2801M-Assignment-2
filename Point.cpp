@@ -15,3 +15,13 @@ int Point::get_y()
 {
 	return y;
 }
+
+void Point::set_x(int newX)
+{
+	x = newX;
+}
+
+void Point::set_y(int newY)
+{
+	y = newY;
+}
