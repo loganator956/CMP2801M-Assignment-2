@@ -148,6 +148,7 @@ int main()
 
 		// do any necessary postprocessing at the end of each loop...
 		// yes, there is some necessary postprocessing...
+		parameters.clear();
 		cout << endl << endl;
 	}
 
