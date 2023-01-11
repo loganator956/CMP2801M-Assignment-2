@@ -15,5 +15,8 @@ public:
 	virtual float calculatePerimeter() = 0;
 	virtual std::vector<Point*> calculatePoints() = 0;
 	virtual std::string toString() = 0;
+	Shape(); // do i  need this?
+	Shape(int x, int y); // find out if this needs to be here or not?
+	~Shape(); // does this need to be here?
 };
 
