@@ -18,7 +18,8 @@ std::vector<Point*> Circle::calculatePoints()
 
 void Circle::move(int x, int y)
 {
-    std::cout << "Move circle" << std::endl;
+    leftTop->set_x(leftTop->get_x() + x);
+    leftTop->set_y(leftTop->get_y() +y);
 }
 
 void Circle::scale(int x, int y)
