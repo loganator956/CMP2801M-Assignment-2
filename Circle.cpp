@@ -1,4 +1,5 @@
 #include "Circle.h"
+#include <iostream>
 
 float Circle::calculateArea()
 {
@@ -15,11 +16,12 @@ std::vector<Point*> Circle::calculatePoints()
     return std::vector<Point*>();
 }
 
-void Circle::move()
+void Circle::move(int x, int y)
 {
+    std::cout << "Move circle" << std::endl;
 }
 
-void Circle::scale()
+void Circle::scale(int x, int y)
 {
 }
 
