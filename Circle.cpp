@@ -2,12 +2,12 @@
 
 float Circle::calculateArea()
 {
-    return 0.0f;
+    return pi * radius * radius;
 }
 
 float Circle::calculatePerimeter()
 {
-    return 0.0f;
+    return pi * radius * 2;
 }
 
 std::vector<Point*> Circle::calculatePoints()
