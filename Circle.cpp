@@ -24,6 +24,11 @@ void Circle::move(int x, int y)
 
 void Circle::scale(int x, int y)
 {
+    // use the x value
+    radius *= x;
+    calculatePoints();
+    calculateArea();
+    calculatePerimeter();
 }
 
 std::string Circle::toString()
