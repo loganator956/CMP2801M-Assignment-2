@@ -146,7 +146,6 @@ int main()
 		shapes[shapes.size() - 1]->calculatePoints();
 		shapes[shapes.size() - 1]->calculateArea();
 		shapes[shapes.size() - 1]->calculatePerimeter();
-		std::cout << shapes[shapes.size() - 1]->toString() << std::endl;
 
 		// do any necessary postprocessing at the end of each loop...
 		// yes, there is some necessary postprocessing...
