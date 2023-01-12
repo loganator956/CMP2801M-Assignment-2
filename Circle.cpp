@@ -26,6 +26,7 @@ void Circle::move(int x, int y)
 {
     leftTop->set_x(leftTop->get_x() + x);
     leftTop->set_y(leftTop->get_y() +y);
+    calculatePoints();
 }
 
 void Circle::scale(int x, int y)
