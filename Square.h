@@ -1,6 +1,9 @@
 #pragma once
 #include "Shape.h"
 #include "Movable.h"
+/// <summary>
+/// A square shape. Cannot be scaled on X and Y independently
+/// </summary>
 class Square :
     public Shape, public Movable
 {

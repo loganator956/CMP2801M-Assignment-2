@@ -1,6 +1,9 @@
 #pragma once
 #include "Shape.h"
 #include "Movable.h"
+/// <summary>
+/// A circle shape. Cannot be scaled X and Y independently
+/// </summary>
 class Circle :
     public Shape, public Movable
 {

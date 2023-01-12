@@ -1,6 +1,9 @@
 #pragma once
 #include "Shape.h"
 #include "Movable.h"
+/// <summary>
+/// A rectangle shape
+/// </summary>
 class Rectangle :
     public Shape, public Movable
 {
