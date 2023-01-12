@@ -76,7 +76,7 @@ int main()
 			Rectangle* r = new Rectangle(x, y, h, w);
 			shapes.push_back(r);
 			// TODO: Implement operator overloading
-			cout << r->toString() << endl; /* instead of this, you may implement operator overloadig and
+			cout << r->toString() << std::endl; /* instead of this, you may implement operator overloadig and
 									use cout << r which will give you additional points */
 		}
 		else if (command.compare("addS") == 0) {
@@ -88,7 +88,7 @@ int main()
 
 			Square* s = new Square(x, y, e);
 			shapes.push_back(s);
-			cout << s->toString();
+			cout << s->toString() << std::endl;
 		}
 
 		if (command.compare("addC") == 0) {
@@ -100,7 +100,7 @@ int main()
 
 			Circle* c = new Circle(x, y, r);
 			shapes.push_back(c);
-			cout << c->toString();
+			cout << c->toString() << std::endl;
 			
 		}
 		else if (command.compare("scale") == 0) {
@@ -116,7 +116,8 @@ int main()
 
 			Movable* m = dynamic_cast<Movable*>(shapes[shapeNo - 1]);
 			m->scale(x, y);
-			
+			std::cout << shapes[shapeNo - 1]->toString();
+
 		}
 		else if (command.compare("move") == 0) {
 			// move object at index 
@@ -130,6 +131,7 @@ int main()
 			// you can't automatically type cast from a Shape to a Movable, but you can force a downcasting
 			Movable *m = dynamic_cast<Movable*>(shapes[shapeNo - 1]);
 			m->move(x, y);
+			std::cout << shapes[shapeNo - 1]->toString();
 			// scale should work similarly...
 			// note that here you should see the corresponding toString output for the derived classes...
 			// if toString is not a virtual function, you may see the base class functionality :(
@@ -140,16 +142,10 @@ int main()
 		}
 
 		// calculate points, area, and perimeter
-		std::vector<Point*> points = shapes[shapes.size() - 1]->calculatePoints();
-		std::cout << "Points[";
-		for (int i = 0; i < points.size(); i++)
-		{
-			std::cout << "(" << points[i]->get_x() << ", " << points[i]->get_y() << ")";
-		}
-		std::cout << "]" << endl;
-		float a = shapes[shapes.size() - 1]->calculateArea();
-		float p = shapes[shapes.size() - 1]->calculatePerimeter();
-		std::cout << "Area=" << a << " Perimeter=" << p << endl;
+		// TODO: Make it update these automatically when necessary
+		shapes[shapes.size() - 1]->calculatePoints();
+		shapes[shapes.size() - 1]->calculateArea();
+		shapes[shapes.size() - 1]->calculatePerimeter();
 
 		// do any necessary postprocessing at the end of each loop...
 		// yes, there is some necessary postprocessing...
