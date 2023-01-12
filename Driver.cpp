@@ -117,7 +117,7 @@ int main()
 			Movable* m = dynamic_cast<Movable*>(shapes[shapeNo - 1]);
 			m->scale(x, y);
 			std::cout << shapes[shapeNo - 1]->toString();
-			
+
 		}
 		else if (command.compare("move") == 0) {
 			// move object at index 
