@@ -3,17 +3,23 @@
 
 float Circle::calculateArea()
 {
-    return pi * radius * radius;
+    set_area(pi * radius * radius);
+    return get_area();
 }
 
 float Circle::calculatePerimeter()
 {
-    return pi * radius * 2;
+    set_perimeter(pi * radius * 2);
+    return get_perimeter();
 }
 
 std::vector<Point*> Circle::calculatePoints()
 {
-    return std::vector<Point*>();
+    std::vector<Point*> points = std::vector<Point*>();
+    points.push_back(new Point(*leftTop));
+    points.push_back(new Point(leftTop->get_x() + radius * 2, leftTop->get_y() + radius * 2));
+    set_points(points);
+    return get_points();
 }
 
 void Circle::move(int x, int y)
@@ -48,4 +54,7 @@ Circle::Circle(int x, int y, int r)
     leftTop = new Point(x, y);
     radius = r;
     isCircular = true;
+    calculateArea();
+    calculatePerimeter();
+    calculatePoints();
 }
