@@ -116,6 +116,7 @@ int main()
 
 			Movable* m = dynamic_cast<Movable*>(shapes[shapeNo - 1]);
 			m->scale(x, y);
+			std::cout << shapes[shapeNo - 1]->toString();
 			
 		}
 		else if (command.compare("move") == 0) {
@@ -130,6 +131,7 @@ int main()
 			// you can't automatically type cast from a Shape to a Movable, but you can force a downcasting
 			Movable *m = dynamic_cast<Movable*>(shapes[shapeNo - 1]);
 			m->move(x, y);
+			std::cout << shapes[shapeNo - 1]->toString();
 			// scale should work similarly...
 			// note that here you should see the corresponding toString output for the derived classes...
 			// if toString is not a virtual function, you may see the base class functionality :(
