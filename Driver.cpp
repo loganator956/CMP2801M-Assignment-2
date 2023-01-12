@@ -76,7 +76,7 @@ int main()
 			Rectangle* r = new Rectangle(x, y, h, w);
 			shapes.push_back(r);
 			// TODO: Implement operator overloading
-			cout << r->toString() << endl; /* instead of this, you may implement operator overloadig and
+			cout << r->toString() << std::endl; /* instead of this, you may implement operator overloadig and
 									use cout << r which will give you additional points */
 		}
 		else if (command.compare("addS") == 0) {
@@ -88,7 +88,7 @@ int main()
 
 			Square* s = new Square(x, y, e);
 			shapes.push_back(s);
-			cout << s->toString();
+			cout << s->toString() << std::endl;
 		}
 
 		if (command.compare("addC") == 0) {
@@ -100,7 +100,7 @@ int main()
 
 			Circle* c = new Circle(x, y, r);
 			shapes.push_back(c);
-			cout << c->toString();
+			cout << c->toString() << std::endl;
 			
 		}
 		else if (command.compare("scale") == 0) {
