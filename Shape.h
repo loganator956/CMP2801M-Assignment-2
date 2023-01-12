@@ -7,7 +7,7 @@ class Shape
 private:
 	float area;
 	float perimeter;
-	std::vector<Point> points;
+	std::vector<Point*> points;
 public:
 	std::vector<Point*> get_points();
 	void set_points(std::vector<Point*>);
