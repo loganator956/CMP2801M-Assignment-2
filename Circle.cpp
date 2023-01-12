@@ -37,7 +37,7 @@ std::string Circle::toString()
         "\nPoints[";
     for (int i = 0; i < get_points().size(); i++)
     {
-        std::cout << "(" << get_points()[i]->get_x() << ", " << get_points()[i]->get_y() << ")";
+        newString += "(" + std::to_string(get_points()[i]->get_x()) + ", " + std::to_string(get_points()[i]->get_y()) + ")";
     }
     newString += "]\nArea=" + std::to_string(get_area()) + " Perimeter=" + std::to_string(get_perimeter());
     return newString;
